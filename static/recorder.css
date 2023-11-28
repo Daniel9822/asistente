@@ -1,0 +1,128 @@
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 100vh;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.clicked {
+  font-size: 3em;
+  background-image: linear-gradient(to right, white 0%, #19ceae, #dc3545);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: fillText 4s alternate infinite;
+}
+
+@keyframes fillText {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.btn-record {
+  border: none;
+  padding: 25px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-record-green {
+  background-color: #19ceae;
+}
+
+.btn-record-red {
+  background-color: #dc3545;
+}
+
+.btn-record img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.record-spinner {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.mic-img {
+  width: 30px;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  background: rgb(196, 202, 235);
+  background: black;
+  box-shadow: 0px 2px 20px 6px #0f0e0e5c inset;
+}
+
+.container {
+  background-color: black;
+  width: fit-content;
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav-container aside {
+  color: white;
+}
+
+.nav-container button {
+  border: none;
+  padding: 10px;
+  background: #19ceae;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.logo {
+  background: -webkit-linear-gradient(white, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: tomato;
+  font-size: 30px;
+}

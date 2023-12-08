@@ -8,6 +8,7 @@ from llm import LLM
 from weather import Weather
 from tts import TTS
 from pc_command import PcCommand
+from sendMessage import SendMessage
 
 #Cargar llaves del archivo .env
 load_dotenv()
@@ -55,6 +56,12 @@ def audio():
         
         elif function_name == "dominate_human_race":
             final_response = "No te creas. Suscríbete al canal!"
+            tts_file = TTS().process(final_response)
+            return {"result": "ok", "text": final_response, "file": tts_file}
+        elif function_name == 'sendMessage':
+            response = SendMessage().get(args["number"], args["body"])
+            print(f"a ver", response)
+            final_response = "Perfecto, el mensaje se envio correctamente al numero " + args["number"] + "diciendo lo siguiente, " + args["body"]
             tts_file = TTS().process(final_response)
             return {"result": "ok", "text": final_response, "file": tts_file}
     else:

@@ -6,18 +6,27 @@ let audioResponseHandler
 
 const viewInformation = () => {
   const informationButton = document.querySelector('.information')
+  const fakeModal = document.querySelector('.fakeModal')
+
+  const fakeModalIsActive = fakeModal.classList.contains('fakeModalActive')
   const verifyClass = informationButton.classList.contains('active')
 
+  fakeModal.addEventListener('click', e => {
+    informationButton.classList.remove('active')
+    fakeModal.classList.remove('fakeModalActive')
+  })
 //   const createModal = document.createElement('div')
 //   createModal.style.background = 'rgb(0 0 0 / 80%)'
 //   createModal.style.position = 'absolute'
 //   createModal.style.inset = '0'
 
-  if (verifyClass) {
+  if (verifyClass && fakeModalIsActive) {
     informationButton.classList.remove('active')
+    fakeModal.classList.remove('fakeModalActive')
     // body.removeChild(createModal)
   } else {
     informationButton.classList.add('active')
+    fakeModal.classList.add('fakeModalActive')
     // body.appendChild(createModal)
     // createModal.append(informationButton)
   }

@@ -126,3 +126,21 @@ body {
   color: tomato;
   font-size: 30px;
 }
+
+.information {
+  height: 500px;
+  width: 400px;
+  background: #0009;
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  border-radius: 10px;
+  transform: translateY(-130%);
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  color: white;
+}
+
+.active {
+  transform: translateY(0);
+}

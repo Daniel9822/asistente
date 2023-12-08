@@ -67,6 +67,23 @@ class LLM():
                         }
                     }
                 },
+                 {
+                    "name": "sendMessage",
+                    "description": "enviar mensaje por whatsapp",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "number": {
+                                "type": "string",
+                                "description": "numero de whatsapp"
+                            },
+                            "body": {
+                              "type": "string",
+                              "description": "cuerpo del mensaje a enviar"  
+                            }
+                        }
+                    },
+                },
                 {
                     "name": "dominate_human_race",
                     "description": "Dominar a la raza humana",
@@ -75,7 +92,7 @@ class LLM():
                         "properties": {
                         }
                     },
-                }
+                },
             ],
             function_call="auto",
         )
